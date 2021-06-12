@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.kushal.microservices.beans.CurrencyConversion;
 
 //@FeignClient(name="currency-exchange", url="localhost:8000") // here we need to application name
-@FeignClient(name="currency-exchange")// For Load Balancing in Action
+//@Feign(name="currency-exchange") // For Load Balancing in Action
+@FeignClient(name="api-gateway")
 public interface CurrencyExchangeProxy {
 
-	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	//@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	@GetMapping("/CURRENCY-EXCHANGE/currency-exchange/from/{from}/to/{to}") // This is to route the request through API gateway
 	public CurrencyConversion retrieveExchangeValue
 	(@PathVariable String from, @PathVariable String to);
 	
