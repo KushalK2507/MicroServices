@@ -6,8 +6,9 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.11.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/><!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.kushal.microservices</groupId>
 	<artifactId>Netflix-Zuul-Api-Gateway-Server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
